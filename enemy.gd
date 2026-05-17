@@ -9,5 +9,10 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("hitter"):
-		area.queue_free()  # delete the bullet that hit us
-		queue_free()       # delete the enemy
+		Global.kills += 1
+		area.queue_free()
+		queue_free()
+		
+	if Global.kills % 5 == 0:  # every 5 kills, not just when kills == 5
+		Waves.wave += 1
+		Global.spawn_interval *= 0.8  # increase speed by 20%

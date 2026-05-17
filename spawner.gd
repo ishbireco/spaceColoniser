@@ -3,19 +3,21 @@ extends Node
 var enemy_scene = preload("res://enemy.tscn")
 var spawn_interval = 5
 var spawn_points = []
+var timer : Timer
 
 func _ready() -> void:
 	for child in get_children():
 		if child is Marker2D:
 			spawn_points.append(child)
 	
-	var timer = Timer.new()
+	timer = Timer.new()
 	add_child(timer)
-	timer.wait_time = spawn_interval
+	timer.wait_time = Global.spawn_interval
 	timer.timeout.connect(_on_timer_timeout)
 	timer.start()
 	
 func _on_timer_timeout():
+	timer.wait_time = Global.spawn_interval
 	spawn_enemy()
 	
 func spawn_enemy():
@@ -27,3 +29,4 @@ func spawn_enemy():
 	var enemy = enemy_scene.instantiate()
 	enemy.global_position = point.global_position
 	get_parent().add_child(enemy)
+ 
