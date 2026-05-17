@@ -13,7 +13,8 @@ config_version=5
 config/name="spaceColoniser"
 run/main_scene="uid://dun021u4psypq"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="uid://658jtue572pd"
+config/icon="uid://d0nso604d60o2"
 
 [autoload]
 
