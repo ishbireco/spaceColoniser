@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dvax8r87hc02s"]
+
+[ext_resource type="Texture2D" uid="uid://bxhkrpw461iyt" path="res://panel_beigeLight.png" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://bhy703cbnprdx" path="res://buttonLong_beige.png" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://biasqt7ht3t18" path="res://buttonLong_beige_pressed.png" id="3_fu7sn"]
+[ext_resource type="Script" uid="uid://drr4lht2r8asv" path="res://texture_button.gd" id="4_jix8l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
+font_size = 33
+outline_size = 5
+outline_color = Color(0.7357965, 0.73579663, 0.73579746, 1)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/outline_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_fu7sn"]
+font_size = 25
+outline_size = 5
+outline_color = Color(0.6858353, 0.68583524, 0.6858352, 1)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/outline_size = 15
+
+[node name="mainMenu" type="Control" unique_id=1997291482]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mainText" type="NinePatchRect" parent="." unique_id=1206716720]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 155.0
+offset_right = 402.0
+offset_bottom = 219.0
+texture = ExtResource("1_06t4h")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="Label" type="Label" parent="." unique_id=1759306909]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -146.5
+offset_top = 162.0
+offset_right = 161.0
+offset_bottom = 208.0
+grow_horizontal = 2
+text = "SPACE COLONISER"
+label_settings = SubResource("LabelSettings_7vrkn")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=493454883]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 288.0
+offset_right = 338.0
+offset_bottom = 337.0
+texture_normal = ExtResource("1_7vrkn")
+texture_pressed = ExtResource("3_fu7sn")
+script = ExtResource("4_jix8l")
+
+[node name="Label" type="Label" parent="TextureButton" unique_id=670827432]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 4.0
+offset_right = 186.0
+offset_bottom = 41.0
+text = "S T A R T   "
+label_settings = SubResource("LabelSettings_fu7sn")

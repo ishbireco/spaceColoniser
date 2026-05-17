@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="spaceColoniser"
-run/main_scene="uid://dun021u4psypq"
+run/main_scene="uid://dvax8r87hc02s"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/image="uid://658jtue572pd"
 config/icon="uid://d0nso604d60o2"
