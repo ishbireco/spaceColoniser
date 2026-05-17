@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://46t0kbbphsxa"]
+
+[ext_resource type="Texture2D" uid="uid://d0nso604d60o2" path="res://rocket.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://drn8h5eumjkwn" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 19.300259
+
+[node name="Area2D" type="Area2D" unique_id=1490614701]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1442793861]
+scale = Vector2(2, 2)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=271817492]
+position = Vector2(-0.5, -8)
+shape = SubResource("CircleShape2D_onrkg")
+
+[node name="muzzel" type="Marker2D" parent="." unique_id=867855344]
+position = Vector2(-1, -24)

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dun021u4psypq"]
+
+[ext_resource type="Script" uid="uid://t72flwc4cpfk" path="res://spawner.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://46t0kbbphsxa" path="res://player.tscn" id="1_ig7tw"]
+
+[node name="main" type="Node2D" unique_id=1383350426]
+
+[node name="spawner" type="Node" parent="." unique_id=1275844690]
+script = ExtResource("1_0xm2m")
+
+[node name="Marker2D" type="Marker2D" parent="spawner" unique_id=281153763]
+position = Vector2(399, -51)
+
+[node name="Marker2D2" type="Marker2D" parent="spawner" unique_id=325393502]
+position = Vector2(250, -50)
+
+[node name="Marker2D3" type="Marker2D" parent="spawner" unique_id=705121185]
+position = Vector2(99, -54)
+
+[node name="bg" type="ColorRect" parent="." unique_id=149049299]
+offset_right = 504.0
+offset_bottom = 734.0
+color = Color(0, 0, 0, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="bg" unique_id=117818877]
+position = Vector2(244, 0)
+amount = 200
+lifetime = 20.0
+emission_shape = 3
+emission_rect_extents = Vector2(240, 1)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 13.15
+initial_velocity_max = 77.5
+angular_velocity_min = -511.58
+angular_velocity_max = 378.95
+scale_amount_max = 2.0
+
+[node name="Area2D" parent="." unique_id=1490614701 instance=ExtResource("1_ig7tw")]
+position = Vector2(243, 624)
+scale = Vector2(1.5, 1.5)
