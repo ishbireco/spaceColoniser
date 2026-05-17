@@ -9,6 +9,6 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 
 
-func _on_body_entered(body):
-	if body.is_in_group("hitter"):
+func _on_area_entered(area: Area2D):
+	if area.is_in_group("hitter"):
 		queue_free()
