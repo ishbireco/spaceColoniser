@@ -38,7 +38,7 @@ angular_velocity_min = -511.58
 angular_velocity_max = 378.95
 scale_amount_max = 2.0
 
-[node name="Area2D" parent="." unique_id=1490614701 instance=ExtResource("1_ig7tw")]
+[node name="Player" parent="." unique_id=1490614701 instance=ExtResource("1_ig7tw")]
 position = Vector2(243, 624)
 scale = Vector2(1.5, 1.5)
 

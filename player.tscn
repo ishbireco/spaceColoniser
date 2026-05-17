@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 19.300259
 
-[node name="Area2D" type="Area2D" unique_id=1490614701 groups=["player"]]
+[node name="Player" type="Area2D" unique_id=1490614701]
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1442793861]
