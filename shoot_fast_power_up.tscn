@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cg4vay528j4ho"]
+
+[ext_resource type="Script" uid="uid://jnnlhbf55scy" path="res://shoot_fast_power_up.gd" id="1_7c8la"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpar6"]
+
+[node name="shootFastPowerUp" type="Area2D" unique_id=1686559056]
+script = ExtResource("1_7c8la")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1405513874]
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 0.22745098, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102059733]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fpar6")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

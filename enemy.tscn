@@ -53,4 +53,4 @@ animation = &"normal"
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_wujgv")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

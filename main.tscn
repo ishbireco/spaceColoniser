@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://t72flwc4cpfk" path="res://spawner.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://46t0kbbphsxa" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cg4vay528j4ho" path="res://shoot_fast_power_up.tscn" id="3_h2yge"]
 
 [node name="main" type="Node2D" unique_id=1383350426]
 
@@ -40,3 +41,6 @@ scale_amount_max = 2.0
 [node name="Area2D" parent="." unique_id=1490614701 instance=ExtResource("1_ig7tw")]
 position = Vector2(243, 624)
 scale = Vector2(1.5, 1.5)
+
+[node name="shootFastPowerUp" parent="." unique_id=1686559056 instance=ExtResource("3_h2yge")]
+position = Vector2(243, 275)
