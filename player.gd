@@ -6,6 +6,7 @@ var max_size : Vector2
 var half_size : Vector2
 var bullet_scene = preload("res://bullet.tscn")
 var can_shoot = true
+var bullet_speed = 600
 
 func _ready() -> void:
 	max_size = get_viewport_rect().size
@@ -21,6 +22,7 @@ func _physics_process(delta: float) -> void:
 func shoot_bullet():
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = $muzzel.global_position
+	bullet.speed = bullet_speed
 	get_parent().add_child(bullet)
 	can_shoot = false
 	await get_tree().create_timer(1).timeout
