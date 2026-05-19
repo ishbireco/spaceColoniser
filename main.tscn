@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://t72flwc4cpfk" path="res://spawner.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://46t0kbbphsxa" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cg4vay528j4ho" path="res://shoot_fast_power_up.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://bysa0ljrjqw35" path="res://label.gd" id="4_1bvp3"]
 [ext_resource type="FontFile" uid="uid://dwvt37qks2b05" path="res://Trivox-Demo.otf" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://cvk64amwda6a3" path="res://label_2.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://dwuvpx6ovl8yx" path="res://rich_text_label.gd" id="6_7mycd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_272bh"]
 font = ExtResource("4_7mycd")
@@ -56,9 +56,6 @@ scale_amount_max = 2.0
 position = Vector2(243, 624)
 scale = Vector2(1.5, 1.5)
 
-[node name="shootFastPowerUp" parent="." unique_id=1686559056 instance=ExtResource("3_h2yge")]
-position = Vector2(243, 275)
-
 [node name="scoreLabel" type="Label" parent="." unique_id=532637529]
 offset_left = 11.0
 offset_top = 21.0
@@ -74,3 +71,20 @@ offset_right = 459.08698
 offset_bottom = 86.0
 label_settings = SubResource("LabelSettings_7mycd")
 script = ExtResource("5_lquwl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1404924255]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 168.0
+offset_top = 155.0
+offset_right = 369.5
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.7859064, 0.3779649, 0.28772402, 1)
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "[wave]LEVEL: 1	"
+script = ExtResource("6_7mycd")

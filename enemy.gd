@@ -13,6 +13,9 @@ func _on_area_entered(area: Area2D) -> void:
 		area.queue_free()
 		queue_free()
 		
-	if Global.kills % 5 == 0:  # every 5 kills, not just when kills == 5
+	if Global.kills == 5:  
 		Waves.wave += 1
-		Global.spawn_interval *= 0.8  # increase speed by 20%
+	elif Global.kills == 12:
+		Waves.wave += 1
+	elif Global.kills == 20:
+		Waves.wave +=1
