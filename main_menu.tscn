@@ -4,6 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://bhy703cbnprdx" path="res://buttonLong_beige.png" id="1_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://biasqt7ht3t18" path="res://buttonLong_beige_pressed.png" id="3_fu7sn"]
 [ext_resource type="Script" uid="uid://drr4lht2r8asv" path="res://texture_button.gd" id="4_jix8l"]
+[ext_resource type="Shader" uid="uid://c8xycvcyc7tiq" path="res://scroll.gdshader" id="5_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://b737b2uhwnhpr" path="res://bg_menu_starts.png" id="6_qe12f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8qtwp"]
+shader = ExtResource("5_nlkkf")
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
 font_size = 33
@@ -28,6 +33,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=968595204]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=646717591]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8qtwp")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_qe12f")
 
 [node name="mainText" type="NinePatchRect" parent="." unique_id=1206716720]
 layout_mode = 0

@@ -4,7 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://46t0kbbphsxa" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cg4vay528j4ho" path="res://shoot_fast_power_up.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://bysa0ljrjqw35" path="res://label.gd" id="4_1bvp3"]
+[ext_resource type="FontFile" uid="uid://dwvt37qks2b05" path="res://Trivox-Demo.otf" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://cvk64amwda6a3" path="res://label_2.gd" id="5_lquwl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_272bh"]
+font = ExtResource("4_7mycd")
+font_size = 18
+font_color = Color(0.2115404, 0.648241, 3.85046e-07, 1)
+outline_size = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mycd"]
+font = ExtResource("4_7mycd")
+font_size = 18
+font_color = Color(0.89138734, 0.2855937, 0.22227034, 1)
 
 [node name="main" type="Node2D" unique_id=1383350426]
 
@@ -47,16 +59,18 @@ scale = Vector2(1.5, 1.5)
 [node name="shootFastPowerUp" parent="." unique_id=1686559056 instance=ExtResource("3_h2yge")]
 position = Vector2(243, 275)
 
-[node name="Label" type="Label" parent="." unique_id=532637529]
+[node name="scoreLabel" type="Label" parent="." unique_id=532637529]
 offset_left = 11.0
 offset_top = 21.0
 offset_right = 126.0
 offset_bottom = 56.0
+label_settings = SubResource("LabelSettings_272bh")
 script = ExtResource("4_1bvp3")
 
-[node name="Label2" type="Label" parent="." unique_id=543436874]
+[node name="waveLabel" type="Label" parent="." unique_id=543436874]
 offset_left = 353.0
 offset_top = 25.0
 offset_right = 459.08698
 offset_bottom = 86.0
+label_settings = SubResource("LabelSettings_7mycd")
 script = ExtResource("5_lquwl")
